@@ -5,13 +5,32 @@ import Card from "../components/Card.astro";
 
 <Layout title="Försäkringsspecialisterna | Hem">
   <main>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-    </ul>
+    <div class="generalInfo">
+      <img class="umeaPicture" src="cityview-umea.png" />
+      <h1>Försäkringsspecialisterna</h1>
+      <ul class="list">
+        <li>Företagsförsäkringar</li>
+        <li>Transportförsäkringar</li>
+        <li>Kreditförsäkringar</li>
+        <li>Tjänstepensioner</li>
+        <li>Utländska försäkringar</li>
+        <li>Kapitalplaceringar</li>
+        <li>Sjukförsäkringar</li>
+        <li>Sjuk/Olycksfallsförsäkringar för barn och ungdom</li>
+        <li>Privata pensionsförsäkringar</li>
+      </ul>
+    </div>
+    <div class="partners">
+      <!--
+				Partners
+			 -->
+      <hr />
+      <h3>Samarbetspartners</h3>
+
+      <!--
+				Interactive list of partners
+			 -->
+    </div>
   </main>
 </Layout>
 
@@ -19,13 +38,65 @@ import Card from "../components/Card.astro";
   main {
     margin: auto;
     padding: 1.5rem;
-    max-width: 60ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  hr {
+    width: 70ch;
   }
   h1 {
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 500;
     margin: 0;
   }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .umeaPicture {
+    z-index: -1;
+    position: absolute;
+    max-width: 40rem;
+    opacity: 30%;
+    left: 5vh;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .generalInfo {
+    margin-bottom: 10vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .list {
+    list-style-type: none;
+    color: #666666;
+    padding: 0;
+  }
+
+  .list > li {
+    padding: 0.2vh;
+  }
+
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
