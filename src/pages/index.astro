@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 ---
 
 <Layout title="Försäkringsspecialisterna | Hem">
@@ -27,9 +26,76 @@ import Card from "../components/Card.astro";
       <hr />
       <h3>Samarbetspartners</h3>
 
-      <!--
-				Interactive list of partners
-			 -->
+      <div class="partnersWrapper">
+        <div id="partnersList">
+          <div>
+            <img class="companyPicture" src="company_pictures/åland.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/alandia.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/chartis.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/chubb.jpg" />
+          </div>
+          <div>
+            <img
+              class="companyPicture"
+              src="company_pictures/dinaförsäkringar.jpg"
+            />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/erv.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/euro.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/folksam.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/gjen.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/gouda.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/if.jpg" />
+          </div>
+          <div>
+            <img
+              class="companyPicture"
+              src="company_pictures/länsförsäkringar.jpg"
+            />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/moderna.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/movestic.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/npg.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/seb.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/skandia.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/svedea.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/trygghansa.jpg" />
+          </div>
+          <div>
+            <img class="companyPicture" src="company_pictures/zurich.jpg" />
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </Layout>
@@ -56,7 +122,23 @@ import Card from "../components/Card.astro";
   h3 {
     font-size: 1rem;
     font-weight: 400;
-    margin: 0;
+    margin: 3vh;
+  }
+
+  #partnersList {
+    list-style: none;
+    display: flex;
+    column-gap: 0.5vh;
+  }
+
+  .partnersWrapper {
+    max-width: 25%;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .companyPicture {
+    width: 10rem;
   }
 
   .partners {
