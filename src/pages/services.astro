@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Försäkringsspecialisterna | Våra Tjänster">
   <main>
     <h1>Våra Tjänster</h1>
+    <hr />
 
     <p>
       Försäkringsspecialisterna är inte knutna till något försäkringsbolag eller
@@ -29,14 +30,22 @@ import Layout from "../layouts/Layout.astro";
 
     <p>Vi kan erbjuda er de bästa alternativen!</p>
 
+    <br />
+
     <h2>Arvode</h2>
-    Arvodet för vår tjänst är inget tillägg utan tas ur försäkringspremien. Detta
-    regleras sedan mellan oss och försäkringsbolagen, ingen faktura. Vi som försäkringsförmedlare
-    företräder er genom fullmakt. Fullmakten kan när som helst återkallas av någon
-    av parterna. Vid återkallande av fullmakt övertar försäkringsbolaget säljansvaret
-    vilket innebär att tidigare förmedlararvode läggs till i försäkringspremien.
+    <hr />
+    <p>
+      Arvodet för vår tjänst är inget tillägg utan tas ur försäkringspremien.
+      Detta regleras sedan mellan oss och försäkringsbolagen, ingen faktura. Vi
+      som försäkringsförmedlare företräder er genom fullmakt. Fullmakten kan när
+      som helst återkallas av någon av parterna. Vid återkallande av fullmakt
+      övertar försäkringsbolaget säljansvaret vilket innebär att tidigare
+      förmedlararvode läggs till i försäkringspremien.
+    </p>
+    <br />
 
     <h2>Försäkringar</h2>
+    <hr />
     <p>
       Som medlem i försäkringsförmedlarorganisationen Hjerta kan vi dessutom
       erbjuda försäkringslösningar som upphandlats genom Hjerta.
@@ -64,6 +73,19 @@ import Layout from "../layouts/Layout.astro";
     font-size: 3rem;
     font-weight: 500;
     margin: 0;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    color: #555555;
+  }
+
+  li {
+    color: #444444;
   }
   .text-gradient {
     background-image: var(--accent-gradient);
