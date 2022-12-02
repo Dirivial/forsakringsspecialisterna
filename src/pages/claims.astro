@@ -147,11 +147,6 @@ import Layout from "../layouts/Layout.astro";
     color: rgb(var(--accent));
   }
 
-  .card-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-  }
   .link-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
@@ -168,6 +163,13 @@ import Layout from "../layouts/Layout.astro";
     .divider {
       width: 30ch;
       margin-bottom: 3vh;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .link-card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
     }
   }
 </style>
