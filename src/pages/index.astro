@@ -28,72 +28,33 @@ import Layout from "../layouts/Layout.astro";
 
       <div class="partnersWrapper">
         <div id="partnersList">
-          <div>
-            <img class="companyPicture" src="company_pictures/åland.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/alandia.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/chartis.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/chubb.jpg" />
-          </div>
-          <div>
-            <img
-              class="companyPicture"
-              src="company_pictures/dinaförsäkringar.jpg"
-            />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/erv.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/euro.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/folksam.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/gjen.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/gouda.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/if.jpg" />
-          </div>
-          <div>
-            <img
-              class="companyPicture"
-              src="company_pictures/länsförsäkringar.jpg"
-            />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/moderna.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/movestic.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/npg.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/seb.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/skandia.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/svedea.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/trygghansa.jpg" />
-          </div>
-          <div>
-            <img class="companyPicture" src="company_pictures/zurich.jpg" />
-          </div>
+          <img class="companyPicture" src="company_pictures/åland.jpg" />
+          <img class="companyPicture" src="company_pictures/alandia.jpg" />
+          <img class="companyPicture" src="company_pictures/chartis.jpg" />
+          <img class="companyPicture" src="company_pictures/chubb.jpg" />
+          <img
+            class="companyPicture"
+            src="company_pictures/dinaförsäkringar.jpg"
+          />
+          <img class="companyPicture" src="company_pictures/erv.jpg" />
+          <img class="companyPicture" src="company_pictures/euro.jpg" />
+          <img class="companyPicture" src="company_pictures/folksam.jpg" />
+          <img class="companyPicture" src="company_pictures/gjen.jpg" />
+          <img class="companyPicture" src="company_pictures/gouda.jpg" />
+          <img class="companyPicture" src="company_pictures/if.jpg" />
+          <img
+            class="companyPicture"
+            src="company_pictures/länsförsäkringar.jpg"
+          />
+          <img class="companyPicture" src="company_pictures/moderna.jpg" />
+          <img class="companyPicture" src="company_pictures/movestic.jpg" />
+          <img class="companyPicture" src="company_pictures/npg.jpg" />
+          <img class="companyPicture" src="company_pictures/salu.jpg" />
+          <img class="companyPicture" src="company_pictures/seb.jpg" />
+          <img class="companyPicture" src="company_pictures/skandia.jpg" />
+          <img class="companyPicture" src="company_pictures/svedea.jpg" />
+          <img class="companyPicture" src="company_pictures/trygghansa.jpg" />
+          <img class="companyPicture" src="company_pictures/zurich.jpg" />
         </div>
       </div>
     </div>
@@ -125,20 +86,9 @@ import Layout from "../layouts/Layout.astro";
     margin: 3vh;
   }
 
-  #partnersList {
-    list-style: none;
-    display: flex;
-    column-gap: 0.5vh;
-  }
-
-  .partnersWrapper {
-    max-width: 25%;
-    overflow: auto;
-    white-space: nowrap;
-  }
-
   .companyPicture {
     width: 10rem;
+    overflow-x: clip;
   }
 
   .partners {
@@ -178,37 +128,35 @@ import Layout from "../layouts/Layout.astro";
   .list > li {
     padding: 0.2vh;
   }
+  @media screen and (min-width: 993px) {
+    #partnersList {
+      list-style: none;
+      display: flex;
+      column-gap: 0.5vh;
+      overflow-x: scroll;
+    }
 
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
+    .partnersWrapper {
+      max-width: 25%;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
   }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
+  @media screen and (max-width: 992px) {
+    #partnersList {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+      gap: 1rem;
+    }
+
+    .partnersWrapper {
+      display: block;
+      width: 100%;
+      overflow-y: hidden;
+      white-space: nowrap;
+      padding: 3vh;
+      margin-bottom: 3vh;
+    }
   }
 </style>
