@@ -4,7 +4,11 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Försäkringsspecialisterna | Våra Tjänster">
   <main>
-    <h1>Våra Tjänster</h1>
+    <div class="generalInfo">
+      <!-- <img class="umeaPicture" src="umea-and-heart.png" /> -->
+      <h1>Våra Tjänster</h1>
+    </div>
+
     <hr />
 
     <p>
@@ -87,6 +91,17 @@ import Layout from "../layouts/Layout.astro";
   li {
     color: #444444;
   }
+  .umeaPicture {
+    z-index: -1;
+    position: absolute;
+    max-width: 40rem;
+    opacity: 20%;
+    left: 0vh;
+    right: 0vh;
+    margin-left: 5vh;
+    margin-right: auto;
+  }
+
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;

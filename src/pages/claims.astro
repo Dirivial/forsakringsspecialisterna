@@ -6,8 +6,9 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Försäkringsspecialisterna | Skadeärenden">
   <main>
     <h1>Skadeärenden</h1>
+    <hr class="divider" />
 
-    <h3>Skadeanmälan kontakt försäkringsbolag</h3>
+    <!-- <h3>Skadeanmälan kontakt försäkringsbolag</h3> -->
 
     <div class="link-card-grid">
       <Card
@@ -98,6 +99,11 @@ import Layout from "../layouts/Layout.astro";
   h3 {
     text-align: center;
     font-weight: 500;
+  }
+
+  .divider {
+    width: 60ch;
+    margin-bottom: 3vh;
   }
 
   .centered {
