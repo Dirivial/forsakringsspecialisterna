@@ -4,7 +4,7 @@
 <div class="header">
   <a href="/"><img class="logoPicture" src="Logga-med-skugga.jpg" /></a>
   <div class="spacer"></div>
-  <ul class="navButtonsList">
+  <ul class="navButtonsList" id="navMenu">
     <li><a class="navLink" href="/">Hem</a></li>
     <li><a class="navLink" href="/services">Våra Tjänster</a></li>
     <li><a class="navLink" href="/claims">Skadeärenden</a></li>
@@ -16,43 +16,115 @@
       >
     </li>
   </ul>
+  <button class="menu">
+    <i class="fa fa-bars"></i>
+  </button>
 </div>
+
+<script>
+  // Find menu button
+  const button = document.querySelector("button.menu");
+
+  // Display mobile navigation menu on click
+  if (button) {
+    button.addEventListener("click", () => {
+      var x = document.getElementById("navMenu");
+      if (x) {
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    });
+  }
+</script>
 
 <style>
   ul {
     padding-inline-start: 0;
   }
 
+  .menu {
+    display: none;
+  }
+
   .header {
     background-color: white;
     height: 3rem;
+    position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
 
   .logoPicture {
-    margin-left: 1vh;
     width: 18rem;
   }
-
-  .navButtonsList {
-    list-style-type: none;
-    display: flex;
-  }
-
-  .navLink {
-    color: #333333;
-    text-decoration: none;
-    padding: 0.5vh;
-  }
-
-  .navLink:hover {
-    border-top: 2px solid #1e73be;
-    color: #1e73be;
-  }
-
   .spacer {
     width: 5vh;
     margin-left: 15vh;
+  }
+
+  @media screen and (min-width: 993px) {
+    .navButtonsList {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .navLink {
+      color: #333333;
+      text-decoration: none;
+      padding: 0.5vh;
+    }
+
+    .navLink:hover {
+      border-top: 2px solid #1e73be;
+      color: #1e73be;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .header {
+      background-color: white;
+      position: relative;
+      height: auto;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+    }
+    .menu {
+      background: white;
+      color: #1e73be;
+      border: none;
+      height: 3rem;
+      width: 4rem;
+      font-size: 17px;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0.2vh;
+    }
+    .navButtonsList {
+      list-style-type: none;
+      display: none;
+      width: 100%;
+      border-top: 2px solid #1e73be;
+    }
+
+    .navLink {
+      color: #333333;
+      width: 100%;
+      text-decoration: none;
+      padding: 0.5vh;
+      padding: 14px 16px;
+      font-size: 17px;
+      display: block;
+    }
+
+    .navLink:hover {
+      border-top: none;
+      color: #1e73be;
+      background-color: #ddd;
+    }
   }
 </style>
