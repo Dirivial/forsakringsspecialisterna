@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Försäkringsspecialisterna | Hem">
   <main>
     <div class="generalInfo">
-      <img class="umeaPicture" src="cityview-umea.png" />
+      <!-- <img class="umeaPicture" src="cityview-umea.png" /> -->
       <h1>Försäkringsspecialisterna</h1>
       <ul class="list">
         <li>Företagsförsäkringar</li>
@@ -71,28 +71,10 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
     justify-items: center;
   }
-  hr {
-    width: 70ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    margin: 0;
-  }
-
-  h3 {
-    font-size: 1rem;
-    font-weight: 400;
-    margin: 3vh;
-  }
-
-  .companyPicture {
-    width: 10rem;
-    overflow-x: clip;
-  }
 
   .partners {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -129,11 +111,26 @@ import Layout from "../layouts/Layout.astro";
     padding: 0.2vh;
   }
   @media screen and (min-width: 993px) {
+    h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .companyPicture {
+      max-width: 10rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 3vh;
+    }
     #partnersList {
       list-style: none;
       display: flex;
-      column-gap: 0.5vh;
-      overflow-x: scroll;
+      gap: 0.5vh;
+      margin-bottom: 1vh;
     }
 
     .partnersWrapper {
@@ -141,8 +138,30 @@ import Layout from "../layouts/Layout.astro";
       overflow-x: scroll;
       white-space: nowrap;
     }
+    hr {
+      width: 70ch;
+    }
   }
   @media screen and (max-width: 992px) {
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    hr {
+      width: 30ch;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 3vh;
+    }
+
+    .companyPicture {
+      max-width: 100%;
+    }
     #partnersList {
       list-style: none;
       display: grid;
@@ -157,6 +176,13 @@ import Layout from "../layouts/Layout.astro";
       white-space: nowrap;
       padding: 3vh;
       margin-bottom: 3vh;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 0;
     }
   }
 </style>
