@@ -1,4 +1,5 @@
 ---
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -8,9 +9,76 @@ import Layout from "../layouts/Layout.astro";
 
     <h3>Skadeanmälan kontakt försäkringsbolag</h3>
 
-    Vid fordonsskada, <a class="downloadLink" download="Fordonsskada.pdf"
-      >Klicka här</a
-    >
+    <div class="card-list">
+      <Card
+        title="Dina Nord"
+        mail="sakskador.nord@dina.se"
+        daytime="Dagtid, företag 0911-23 18 80|Dagtid, motor 0911-23 23 59"
+        jourtime="Jourtid 0771-77 10 00"
+        href="www.dina.se"
+      />
+      <Card
+        title="Folksam"
+        href="www.folksam.se"
+        mail="foretagsskada@folksam.se|skada.foretagsmotor@folksam.se"
+        daytime="Dagtid 0771-960 960"
+        jourtime="Jourtid 020-45 00 00"
+      />
+      <Card
+        title="Gjensidige"
+        href="www.dina.se"
+        mail="skadorhjerta@gjensidige.se"
+        daytime="Dagtid 08-555 018 64"
+        jourtime="Jourtid 0771-326 328"
+      />
+      <Card
+        title="If"
+        href="www.dina.se"
+        mail="skadeservice@if.se"
+        daytime="Dagtid 0771-815 818"
+        jourtime="Jourtid 0771-815 818"
+      />
+      <Card
+        title="Länsförsäkringar Stockholm"
+        href="www.dina.se"
+        mail="info@sth.lansforsakringar.se"
+        daytime="Dagtid 08-562 832 00"
+        jourtime="Jourtid 020-59 00 00"
+      />
+      <Card
+        title="Länsförsäkringar Västerbotten"
+        href="www.dina.se"
+        mail="skador@LFvasterbotten.se"
+        daytime="Dagtid 090-10 90 00"
+        jourtime="Jourtid 020-59 00 00"
+      />
+      <Card
+        title="Moderna Försäkringar"
+        href="www.dina.se"
+        mail="foretagsskador@modernaforsakringar.se|skador-foretagsmotor@modernaforsakringar.se"
+        daytime="Dagtid 0200-21 21 20"
+        jourtime="Jourtid 0200-21 21 20"
+      />
+      <Card
+        title="Trygg Hansa"
+        href="www.dina.se"
+        mail="ftgskador@trygghansa.se"
+        daytime="Dagtid 077-11 11 500"
+        jourtime="Jourtid 077-11 11 500"
+      />
+      <Card
+        title="Ålands Ömsesidiga"
+        href="www.dina.se"
+        mail=""
+        daytime="Dagtid +358-182 76 00"
+        jourtime="Jourtid +358-182 76 01"
+      />
+    </div>
+    <div class="centered">
+      Vid fordonsskada, <a class="downloadLink" download="Fordonsskada.pdf"
+        >klicka här (pdf)</a
+      >
+    </div>
   </main>
 </Layout>
 
@@ -24,6 +92,18 @@ import Layout from "../layouts/Layout.astro";
     font-size: 3rem;
     font-weight: 500;
     margin: 0;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .centered {
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+    text-align: center;
   }
 
   .downloadLink {
@@ -60,9 +140,15 @@ import Layout from "../layouts/Layout.astro";
   .instructions strong {
     color: rgb(var(--accent));
   }
+
+  .card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
   .link-card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
     gap: 1rem;
     padding: 0;
   }

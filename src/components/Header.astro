@@ -3,7 +3,7 @@
 
 <div class="header">
   <a href="/"><img class="logoPicture" src="Logga-med-skugga.jpg" /></a>
-
+  <div class="spacer"></div>
   <ul class="navButtonsList">
     <li><a class="navLink" href="/">Hem</a></li>
     <li><a class="navLink" href="/services">Våra Tjänster</a></li>
@@ -19,11 +19,15 @@
 </div>
 
 <style>
+  ul {
+    padding-inline-start: 0;
+  }
+
   .header {
     background-color: white;
     height: 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .logoPicture {
@@ -32,10 +36,8 @@
   }
 
   .navButtonsList {
-    margin-right: 1vh;
     list-style-type: none;
     display: flex;
-    column-gap: 1vh;
   }
 
   .navLink {
@@ -47,5 +49,9 @@
   .navLink:hover {
     border-top: 2px solid #1e73be;
     color: #1e73be;
+  }
+
+  .spacer {
+    width: 5vh;
   }
 </style>
