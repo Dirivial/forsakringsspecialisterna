@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Försäkringsspecialisterna | Hem">
   <main>
     <div class="generalInfo">
-      <!-- <img class="umeaPicture" src="cityview-umea.png" /> -->
+      <img class="umeaPicture" src="cityview-umea.png" />
       <h1>Försäkringsspecialisterna</h1>
       <ul class="list">
         <li>Företagsförsäkringar</li>
@@ -80,17 +80,6 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
   }
 
-  .umeaPicture {
-    z-index: -1;
-    position: absolute;
-    max-width: 40rem;
-    opacity: 30%;
-    left: 5vh;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .generalInfo {
     margin-bottom: 10vh;
     width: 60%;
@@ -116,7 +105,16 @@ import Layout from "../layouts/Layout.astro";
       font-weight: 500;
       margin: 0;
     }
-
+    .umeaPicture {
+      z-index: -1;
+      position: absolute;
+      max-width: 40rem;
+      opacity: 30%;
+      left: 5vh;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .companyPicture {
       max-width: 10rem;
     }
@@ -134,7 +132,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .partnersWrapper {
-      max-width: 25%;
+      max-width: 60%;
       overflow-x: scroll;
       white-space: nowrap;
     }
@@ -157,6 +155,10 @@ import Layout from "../layouts/Layout.astro";
       font-size: 1rem;
       font-weight: 400;
       margin: 3vh;
+    }
+
+    .umeaPicture {
+      display: none;
     }
 
     .companyPicture {
