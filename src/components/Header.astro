@@ -1,11 +1,13 @@
 ---
 ---
 
-<div class="header p-2 sticky bg-white bg-opacity-90">
+<div
+  class="header p-2 top-0 sticky flex flex-row justify-center bg-white bg-opacity-90"
+>
   <a href="/"><img class="max-w-12 max-h-12" src="Logga-med-skugga.jpg" /></a>
   <div class="spacer"></div>
   <ul class="navButtonsList" id="navMenu">
-    <li><a class="navLink myPageLink" id="top">Hem</a></li>
+    <li><a class="navLink myPageLink" id="home">Hem</a></li>
     <li>
       <a class="navLink myPageLink" id="services">Våra Tjänster</a>
     </li>
@@ -28,14 +30,15 @@
 </div>
 
 <script>
-  const aTop = document.getElementById("top");
+  const aTop = document.getElementById("home");
   if (aTop) {
     aTop.addEventListener("click", () => {
-      const contactSection = document.getElementById("topSection");
-      if (contactSection) {
-        const options: ScrollIntoViewOptions = { behavior: "smooth" };
-        contactSection.scrollIntoView(options);
-      }
+      const options: ScrollToOptions = {
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      };
+      scrollTo(options);
     });
   }
 
@@ -103,12 +106,6 @@
 
   .menu {
     display: none;
-  }
-
-  .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
   }
 
   .spacer {
