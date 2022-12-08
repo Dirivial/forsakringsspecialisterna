@@ -1,14 +1,20 @@
 ---
 ---
 
-<div class="header">
-  <a href="/"><img class="logoPicture" src="Logga-med-skugga.jpg" /></a>
+<div class="header p-2 sticky bg-white bg-opacity-90">
+  <a href="/"><img class="max-w-12 max-h-12" src="Logga-med-skugga.jpg" /></a>
   <div class="spacer"></div>
   <ul class="navButtonsList" id="navMenu">
-    <li><a class="navLink" href="/">Hem</a></li>
-    <li><a class="navLink" href="/services">Våra Tjänster</a></li>
-    <li><a class="navLink" href="/claims">Skadeärenden</a></li>
-    <li><a class="navLink" href="/contact">Kontakt</a></li>
+    <li><a class="navLink myPageLink" id="top">Hem</a></li>
+    <li>
+      <a class="navLink myPageLink" id="services">Våra Tjänster</a>
+    </li>
+    <li>
+      <a class="navLink myPageLink" id="claims">Skadeärenden</a>
+    </li>
+    <li>
+      <a class="navLink myPageLink" id="contact">Kontakt</a>
+    </li>
     <li>
       <a
         class="navLink"
@@ -22,6 +28,50 @@
 </div>
 
 <script>
+  const aTop = document.getElementById("top");
+  if (aTop) {
+    aTop.addEventListener("click", () => {
+      const contactSection = document.getElementById("topSection");
+      if (contactSection) {
+        const options: ScrollIntoViewOptions = { behavior: "smooth" };
+        contactSection.scrollIntoView(options);
+      }
+    });
+  }
+
+  const aServices = document.getElementById("services");
+  if (aServices) {
+    aServices.addEventListener("click", () => {
+      const contactSection = document.getElementById("servicesSection");
+      if (contactSection) {
+        const options: ScrollIntoViewOptions = { behavior: "smooth" };
+        contactSection.scrollIntoView(options);
+      }
+    });
+  }
+
+  const aClaims = document.getElementById("claims");
+  if (aClaims) {
+    aClaims.addEventListener("click", () => {
+      const contactSection = document.getElementById("claimsSection");
+      if (contactSection) {
+        const options: ScrollIntoViewOptions = { behavior: "smooth" };
+        contactSection.scrollIntoView(options);
+      }
+    });
+  }
+
+  const aContact = document.getElementById("contact");
+  if (aContact) {
+    aContact.addEventListener("click", () => {
+      const contactSection = document.getElementById("contactSection");
+      if (contactSection) {
+        const options: ScrollIntoViewOptions = { behavior: "smooth" };
+        contactSection.scrollIntoView(options);
+      }
+    });
+  }
+
   // Find menu button
   const button = document.querySelector("button.menu");
 
@@ -45,22 +95,22 @@
     padding-inline-start: 0;
   }
 
+  li {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+  }
+
   .menu {
     display: none;
   }
 
   .header {
-    background-color: white;
-    height: 3rem;
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
-  .logoPicture {
-    width: 18rem;
-  }
   .spacer {
     width: 5vh;
     margin-left: 15vh;
