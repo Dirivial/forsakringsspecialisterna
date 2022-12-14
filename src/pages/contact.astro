@@ -3,20 +3,23 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Försäkringsspecialisterna | Kontakt">
-  <main>
-    <h1>Kontakta oss</h1>
-    <hr />
-    <p>
+  <main class="pb-24">
+    <div class="generalInfo grid grid-cols-2">
+      <img class="z-0 mt-24" src="Räddningstjänst-vid-olycksplats.png" />
+
+      <div class="p-6">
+    <h1 class="text-center font-light">Kontakta oss</h1>
+
+    <p class="leading-relaxed pl-5">
       Kabelvägen 18 D<br />901 33 Umeå<br />kontoret@fsmail.se<br />Telefon
       Växel: 090-17 18 50
     </p>
 
-    <p>
+    <p class="leading-relaxed pl-5">
       Nicklas Kadeby<br />Telefon: 090-17 18 52<br />Mail: nicklas@fsmail.se
     </p>
 
-    <h3>Klagomålshantering hos Försäkringsspecialisterna AB</h3>
-    <hr />
+    <h2 class="text-center font-light text-xl mt-12 mb-3">Klagomålshantering hos Försäkringsspecialisterna AB</h3>
     <p>
       Försäkringsspecialisterna har en målsättning att du som kund skall vara
       nöjd med våra tjänster och rådgivningar. Ifall det trots allt inträffar
@@ -25,11 +28,13 @@ import Layout from "../layouts/Layout.astro";
       vill vi att ni skriftligen, via mail eller brev, kontaktar oss på
       nedanstående adress. Försök att så konkret och detaljerat som möjligt
       beskriva ärendet. Vår målsättning är att återkoppla och bemöta era
-      synpunkter snarast möjligt.<br /><br />Klagomålsansvarig: Nicklas Kadeby<br
-      />Telefon: 090-17 18 52<br />E-mail: nicklas@fsmail.se<br />Adress:
+      synpunkter snarast möjligt.
+    </p>
+    <p class="mt-3">
+      Klagomålsansvarig: Nicklas Kadeby
+      <br/>Telefon: 090-17 18 52<br />E-mail: nicklas@fsmail.se<br />Adress:
       Försäkringsspecialisterna AB<br />Kabelvägen 18 D<br />901 33 Umeå
     </p>
-    <br />
   </main>
 </Layout>
 
@@ -37,13 +42,10 @@ import Layout from "../layouts/Layout.astro";
   main {
     margin: auto;
     padding: 1.5rem;
-    max-width: 60ch;
   }
   h1 {
     font-size: 3rem;
-    font-weight: 500;
     margin: 0;
-    text-align: center;
   }
 
   h3 {
