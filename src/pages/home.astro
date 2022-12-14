@@ -4,21 +4,22 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Försäkringsspecialisterna | Hem">
   <main class="h-screen">
-    <div class="generalInfo pt-12 pb-24">
-      <img class="absolute right-7 z-0" src="cityview-umea.png" />
-      <h1 class="font-light text-black text-6xl p-3 mb-3">Försäkringsspecialisterna</h1>
-      <ul class="pl-16 leading-relaxed list-disc insurances">
-        <li>Företagsförsäkringar</li>
-        <li>Transportförsäkringar</li>
-        <li>Kreditförsäkringar</li>
-        <li>Tjänstepensioner</li>
-        <li>Utländska försäkringar</li>
-        <li>Kapitalplaceringar</li>
-        <li>Sjukförsäkringar</li>
-        <li>Sjuk/Olycksfallsförsäkringar för barn och ungdom</li>
-        <li>Privata pensionsförsäkringar</li>
-      </ul>
-
+    <div class="generalInfo pt-12 pb-24 grid grid-cols-2">
+      <div>
+        <h1 class="font-light text-black text-6xl p-3 mb-3">Försäkringsspecialisterna</h1>
+        <ul class="pl-16 leading-relaxed list-disc insurances">
+          <li>Företagsförsäkringar</li>
+          <li>Transportförsäkringar</li>
+          <li>Kreditförsäkringar</li>
+          <li>Tjänstepensioner</li>
+          <li>Utländska försäkringar</li>
+          <li>Kapitalplaceringar</li>
+          <li>Sjukförsäkringar</li>
+          <li>Sjuk/Olycksfallsförsäkringar för barn och ungdom</li>
+          <li>Privata pensionsförsäkringar</li>
+        </ul>
+      </div>
+      <img class="z-0 mt-3" src="cityview-umea.png" />
     </div>
 
     <div class="partners ">
@@ -67,6 +68,9 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .partners {
@@ -79,7 +83,6 @@ import Layout from "../layouts/Layout.astro";
 
   .generalInfo {
     margin-bottom: 10vh;
-    width: 80%;
   }
 
   .insurances {
