@@ -3,13 +3,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Försäkringsspecialisterna | Våra Tjänster">
-  <main>
-    <div class="generalInfo">
-      <!-- <img class="umeaPicture" src="umea-and-heart.png" /> -->
-      <h1>Våra Tjänster</h1>
-    </div>
+  <main class="h-screen">
+    <div class="generalInfo grid grid-cols-2">
+      <img class="z-0 mt-24" src="umea-and-heart.png" />
 
-    <hr />
+      <div class="p-6">
+      <h1 class="font-light">Våra Tjänster</h1>
 
     <p>
       Försäkringsspecialisterna är inte knutna till något försäkringsbolag eller
@@ -22,7 +21,7 @@ import Layout from "../layouts/Layout.astro";
       försäkringar inom:
     </p>
 
-    <ul>
+    <ul class="p-10 leading-relaxed">
       <li>Sakförsäkring</li>
       <li>Företag, Fastighet, Fordon mm</li>
       <li>Gruppförsäkring</li>
@@ -32,12 +31,7 @@ import Layout from "../layouts/Layout.astro";
       <li>Kapitalförsäkring</li>
     </ul>
 
-    <p>Vi kan erbjuda er de bästa alternativen!</p>
-
-    <br />
-
-    <h2>Arvode</h2>
-    <hr />
+    <h2 class="text-center font-light text-xl">Arvode</h2>
     <p>
       Arvodet för vår tjänst är inget tillägg utan tas ur försäkringspremien.
       Detta regleras sedan mellan oss och försäkringsbolagen, ingen faktura. Vi
@@ -46,10 +40,8 @@ import Layout from "../layouts/Layout.astro";
       övertar försäkringsbolaget säljansvaret vilket innebär att tidigare
       förmedlararvode läggs till i försäkringspremien.
     </p>
-    <br />
 
-    <h2>Försäkringar</h2>
-    <hr />
+    <h2 class="text-center font-light text-xl mt-12">Försäkringar</h2>
     <p>
       Som medlem i försäkringsförmedlarorganisationen Hjerta kan vi dessutom
       erbjuda försäkringslösningar som upphandlats genom Hjerta.
@@ -57,12 +49,14 @@ import Layout from "../layouts/Layout.astro";
 
     <p>Försäkringar med marknadens bästa omfattning.</p>
 
-    <ul>
+    <ul class="p-10 leading-relaxed">
       <li>Fordonsförsäkring</li>
       <li>Sjukvårdsförsäkring</li>
       <li>Tjänstereseförsäkring</li>
       <li>VD/styrelseförsäkring</li>
     </ul>
+          </div>
+    </div>
   </main>
 </Layout>
 
@@ -71,36 +65,24 @@ import Layout from "../layouts/Layout.astro";
     margin: auto;
     margin-bottom: 3vh;
     padding: 1.5rem;
-    max-width: 60ch;
   }
   h1 {
     font-size: 3rem;
-    font-weight: 500;
     margin: 0;
     text-align: center;
   }
 
   h2 {
     text-align: center;
-    font-weight: 400;
   }
 
   p {
-    color: #555555;
+    color: hsla(0,0%,30%);
   }
 
   li {
-    color: #444444;
-  }
-  .umeaPicture {
-    z-index: -1;
-    position: absolute;
-    max-width: 40rem;
-    opacity: 20%;
-    left: 0vh;
-    right: 0vh;
-    margin-left: 5vh;
-    margin-right: auto;
+    list-style: disc;
+    color: hsla(0,0%,40%);
   }
   @media screen and (max-width: 992px) {
     h1 {
