@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Försäkringsspecialisterna | Hem">
   <main class="xl:h-screen p-3">
-    <div class="generalInfo pt-12 pb-24 grid grid-cols-2">
+    <div class="generalInfo pt-12 pb-24 sm:grid sm:grid-cols-2">
       <div>
         <h1 class="font-light text-black md:text-6xl text-3xl p-3 mb-3">Försäkringsspecialisterna</h1>
         <ul class="pl-16 leading-relaxed list-disc insurances">
@@ -99,21 +99,6 @@ import Layout from "../layouts/Layout.astro";
     padding: 0.2vh;
   }
   @media screen and (min-width: 993px) {
-    h1 {
-      font-size: 3rem;
-      font-weight: 500;
-      margin: 0;
-    }
-    .umeaPicture {
-      z-index: -1;
-      position: absolute;
-      max-width: 40rem;
-      opacity: 30%;
-      left: 5vh;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-    }
     .companyPicture {
       max-width: 10rem;
     }
@@ -140,25 +125,6 @@ import Layout from "../layouts/Layout.astro";
     }
   }
   @media screen and (max-width: 992px) {
-    h1 {
-      font-size: 2rem;
-      font-weight: 500;
-      margin: 0;
-    }
-
-    hr {
-      width: 30ch;
-    }
-
-    h3 {
-      font-size: 1rem;
-      font-weight: 400;
-      margin: 3vh;
-    }
-
-    .umeaPicture {
-      display: none;
-    }
 
     .companyPicture {
       max-width: 100%;
@@ -177,13 +143,6 @@ import Layout from "../layouts/Layout.astro";
       white-space: nowrap;
       padding: 3vh;
       margin-bottom: 3vh;
-    }
-  }
-  @media screen and (max-width: 450px) {
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin: 0;
     }
   }
 </style>
