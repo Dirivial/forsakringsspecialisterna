@@ -4,9 +4,9 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Försäkringsspecialisterna | Hem">
   <main class="xl:h-screen p-3">
-    <div class="generalInfo pt-12 pb-24 sm:grid sm:grid-cols-2">
+    <div class="generalInfo pt-12 sm:pb-24 sm:mb-3 mb-0 sm:grid sm:grid-cols-2">
       <div>
-        <h1 class="font-light text-black md:text-6xl text-3xl p-3 mb-3">Försäkringsspecialisterna</h1>
+        <h1 class="font-light text-black md:text-6xl sm:text-5xl text-3xl p-3 mb-3 sm:text-left text-center">Försäkringsspecialisterna</h1>
         <ul class="pl-16 leading-relaxed list-disc insurances">
           <li>Företagsförsäkringar</li>
           <li>Transportförsäkringar</li>
@@ -22,14 +22,14 @@ import Layout from "../layouts/Layout.astro";
       <img class="z-0 xl:mt-3 mt-16 w-fit sm:block hidden" src="cityview-umea.png" />
     </div>
 
-    <div class="partners ">
+    <div class="partners sm:block hidden">
       <!--
 				Partners
 			 -->
-      <h3>Våra samarbetspartners</h3>
+      <h3 class="sm:block hidden">Våra samarbetspartners</h3>
 
-      <div class="partnersWrapper">
-        <div id="partnersList">
+      <div class="partnersWrapper sm:block hidden">
+        <div id="partnersList" class="sm:block hidden">
           <img class="companyPicture" src="company_pictures/åland.jpg" />
           <img class="companyPicture" src="company_pictures/alandia.jpg" />
           <img class="companyPicture" src="company_pictures/chartis.jpg" />
@@ -79,10 +79,6 @@ import Layout from "../layouts/Layout.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .generalInfo {
-    margin-bottom: 10vh;
   }
 
   .insurances {
@@ -137,7 +133,6 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .partnersWrapper {
-      display: block;
       width: 100%;
       overflow-y: hidden;
       white-space: nowrap;
@@ -145,4 +140,10 @@ import Layout from "../layouts/Layout.astro";
       margin-bottom: 3vh;
     }
   }
+
+  @media screen and (max-width: 354px) {
+    #partnersList {
+      display: none;
+    }
+}
 </style>
